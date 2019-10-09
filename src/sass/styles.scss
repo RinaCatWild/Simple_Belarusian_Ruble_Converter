@@ -1,0 +1,95 @@
+%flexible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%general_style {
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    border: 2px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+$fontsize: 18px;
+
+$margin: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    @extend %flexible;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=1);
+}
+
+.wrapper {
+    @extend %flexible;
+    flex-direction: column;
+    width: 550px;
+    height: 340px;
+    border: 2px solid black;
+    background: rgba(201, 199, 201, 1);
+    background: -moz-linear-gradient(left, rgba(201, 199, 201, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(201, 199, 201, 1)), color-stop(53%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(left, rgba(201, 199, 201, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(201, 199, 201, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(201, 199, 201, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(201, 199, 201, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c7c9', endColorstr='#ffffff', GradientType=1);
+}
+
+.form {
+    height: 100%;
+    padding: 15px;
+}
+
+button {
+    @extend %general_style;
+    padding: .5em 2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+button:active {
+    background: white;
+}
+
+input {
+    @extend %general_style;
+    padding: .5em 1em;
+    margin-top: $margin;
+}
+
+#exchWind {
+    color: black;
+    font-weight: 700;
+    font-size: $fontsize;
+}
+
+p {
+    margin-top: $margin;
+}
+
+.text {
+    font-size: $fontsize;
+}
