@@ -17,9 +17,9 @@ button.onclick = async function () {
                 eurCur = exchData.find(x => x.Cur_Abbreviation === 'EUR').Cur_OfficialRate,
                 rubCur = exchData.find(x => x.Cur_Abbreviation === 'RUB').Cur_OfficialRate,
                 userAnswer = input.value,
-                data = `<p>${(userAnswer * usdCur).toFixed(2)} USD</p>
-                <p>${(userAnswer * eurCur).toFixed(2)} EUR</p>
-                <p>${(userAnswer * rubCur * 10).toFixed(2)} RUB</p>`;
+                data = `<p>${(userAnswer / usdCur).toFixed(2)} USD</p>
+                <p>${(userAnswer / eurCur).toFixed(2)} EUR</p>
+                <p>${((userAnswer / rubCur) * 100).toFixed(2)} RUB</p>`;
             exchangeWindow.innerHTML = data;
         } else {
             exchangeWindow.innerHTML = `<p>Введите сумму в белорусских рублях!</p>`;
